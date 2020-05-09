@@ -107,7 +107,7 @@ const saveInput = document.getElementById('saveInfo')
 
 saveInput.addEventListener('click', function () { saveInformation() }, false)
 const saveInformation = function () {
-  // alter the array and delete the input area
+  // alter the array and
 }
 buttonForStudent()
 
