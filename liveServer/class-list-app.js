@@ -84,3 +84,16 @@ const displayStudent = function (student) {
   studentList.appendChild(studentElement)
   document.body.appendChild(studentList)
 }
+
+document.getElementById('save-user').addEventListener('click', function () {
+  var userName = document.getElementById('user-name').value
+  document.cookie = `username=${userName};expires=Thu, 31 Dec 2020 00:00:00 UTC`
+}, false)
+
+const loadCookies = function () {
+  const usergreeting = document.createElement('p')
+  const message = document.createTextNode(`Hello ${document.cookie}`)
+  usergreeting.appendChild(message)
+  document.body.appendChild(usergreeting)
+}
+document.onload = loadCookies()
